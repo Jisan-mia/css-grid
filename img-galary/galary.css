@@ -1,0 +1,35 @@
+body {
+	width: 60%;
+	margin: 40px auto;
+}
+
+.container img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-gap: 5px;
+	grid-auto-flow: dense;
+}
+.vertical {
+	grid-row: auto / span 2;
+}
+.horizontal {
+	grid-column: auto / span 2;
+}
+
+.big {
+	grid-row: span 2;
+	grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+	body {
+		width: 95%;
+		margin: 20px auto;
+	}
+}

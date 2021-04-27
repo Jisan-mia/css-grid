@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: rgba(236, 222, 250, 0.596);
+	margin: 0 50px;
+	height: 80vh;
+}
+h1 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 2rem;
+	margin: 1rem;
+}
+.container div {
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container div:nth-child(odd) {
+	background-color: tomato;
+}
+.container div:nth-child(even) {
+	background-color: khaki;
+}
+.container div:nth-child(3) {
+	background-color: rgba(0, 0, 255, 0.527);
+}
+.container div:nth-child(4) {
+	background-color: rgb(15, 218, 8);
+}
+.container div:nth-child(6) {
+	background-color: goldenrod;
+}
+.container div:nth-child(7) {
+	background-color: rgba(38, 6, 114, 0.836);
+}
+.container div:nth-child(10) {
+	background-color: orange;
+}
+.container {
+	height: 100%;
+	display: grid;
+	/* grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 40px 1fr 40px;
+	grid-template-areas:
+		". h h h h h h h h h h ."
+		"m m c c c c c c c c c c"
+		". f f f f f f f f f f ."; */
+}
+.header {
+	/* grid-column-start: 1;
+	grid-column-end: 3; */
+	/* grid-column: 2 / -1; */
+	grid-area: h;
+}
+
+.footer {
+	/* grid-column: 1 / -1; */
+	grid-area: f;
+}
+
+.content {
+	/* grid-column: 2 / -1; */
+	grid-area: c;
+}
+
+.menu {
+	/* grid-row: 1 / 3; */
+	grid-area: m;
+}
+
+/* grid auto-fil and minmax  */
+.container2 {
+	border: 0.1rem solid lightblue;
+	/* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: repeat(1, 1fr);
+	grid-auto-rows: 200px; */
+	grid-template-columns: repeat(5, 80px);
+	grid-template-rows: repeat(2, 80px);
+	grid-gap: 5px;
+	/* justify-content: start(default) | right | center | space-around | space-between | space-evenly ; */
+	/* align-content: start | end | center | space-around | space-between | space-evenly; */
+	/* justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center; */
+}
+
+.three {
+	/* justify-self: center; */
+}
