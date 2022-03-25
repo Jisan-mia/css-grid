@@ -25,17 +25,49 @@ body {
   grid-template-columns: repeat(8, 1fr) ;
 }
 
+.grid-container .grid-item:nth-child(1) {
+  /* grid-row-start: 2;
+  grid-row-end: 3;
+
+  grid-column-start: 1;
+  grid-column-end: 9; */
+
+
+}
+
+.grid-container .grid-item:nth-child(2) {
+  /* grid-row-start: 3;
+  grid-row-end: 8;
+
+  grid-column-start: 7;
+  grid-column-end: 8; */
+
+
+}
+
+.grid-container .grid-item:nth-child(3) {
+  /* grid-row-start: 8;
+  grid-row-end: 9;
+
+  grid-column-start: -1;
+  grid-column-end: -4; */
+
+  
+}
 
 
 
 
 
 
+/* positioning & sizing grid-items inside a grid */
+/* 
+  grid-row-start: start-line;
+  grid-row-end: end-line;
 
-
-
-
-
+  grid-column-start: start-line;
+  grid-column-end: end-line;
+*/
 
 
 
