@@ -1,0 +1,28 @@
+
+
+# positioning & sizing grid-items inside a grid 
+
+  grid-row-start: start-line;
+  grid-row-end: end-line;
+
+  grid-column-start: start-line;
+  grid-column-end: end-line;
+
+
+# align a single grid-item using 
+  justify-self:;
+  align-self:;
+
+
+
+# align all-grid items globally from container 
+ 
+  justify-items: center | end | start | etc.;
+  align-items: center | end | start | etc.;
+
+
+
+# how to align the entire grid 
+ 
+  justify-content: center | end 
+  align-content: center | end
