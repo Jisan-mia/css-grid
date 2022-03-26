@@ -43,3 +43,13 @@
   grid-template: grid-template-columns / grid-template-rows / grid-template-areas
 
   gap (grid-gap): row-gap(grid-row-gap) / column-gap(grid-column-gap)
+
+
+# grid gutters is basically adding some space/padding between grid-items(container properties)
+
+  row-gap: 10px; used to add some gap between rows
+
+  column-gap: 10px; used to add some gap between columns
+
+
+# css grid flow algorithm
