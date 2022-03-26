@@ -9,8 +9,8 @@
 
 # grid-items alignment(align a single grid-item using )
   
-  justify-self:;
-  align-self:;
+  justify-self: center | end ;
+  align-self: center | end;
 
 
 # grid-container-sizing 
@@ -35,12 +35,6 @@
   grid-auto-flow: row(default) | column(items will stack vertically and then split over to the next column)
 
 
-# Explicit vs Implicit Grid: to control implicit grid-items
-
-  grid-auto-rows: 100px;
-  grid-auto-columns: 100px;
-
-
 # grid container alignment
 
   grid-template-area:;
@@ -62,6 +56,30 @@
   align-content: center | end
 
 
+# Explicit vs Implicit Grid: to control implicit grid-items. 
+/*
+For example we've a grid container with 300px width and added 5 grid-items. 
+
+Now, on the container, 
+`grid-template-columns: repeat(4, 1fr)`
+`grid-template-rows: 1fr`
+
+Above code means, the grid have to be 4 column and in 1 row. Since we have 5 items, 4 items will be on 1st row and the remaining 1 item will be implicitly on the second row(it's content size will be the row size) though we explicitly wrote only 1 row. 
+
+At the same time there can be implicit columns too.
+
+Here comes 2 properties to control those implicit rows and columns
+
+`
+grid-auto-rows: 100px; (the height of implicit rows)
+grid-auto-columns: 100px; (the width of implicit columns)
+`
+
+*/
+
+  
+
+
 
 # shorthand css grid
   
@@ -78,7 +96,4 @@
   grid-template: grid-template-columns / grid-template-rows / grid-template-areas
 
   gap (grid-gap): row-gap(grid-row-gap) / column-gap(grid-column-gap)
-
-
-
 
