@@ -64,15 +64,15 @@ Now, on the container,
 `grid-template-columns: repeat(4, 1fr)`
 `grid-template-rows: 1fr`
 
-Above code means, the grid have to be 4 column and in 1 row. Since we have 5 items, 4 items will be on 1st row and the remaining 1 item will be implicitly on the second row(it's content size will be the row size) though we explicitly wrote only 1 row. 
+Above code means, the grid have to be 4 column and in 1 row. Since we have 5 items, 4 items will be on 1st row and the remaining 1 item will be on implicit grid and implicitly it will be on the 2nd row (it's content size will be the row size) though we explicitly wrote only 1 row. 
 
-At the same time there can be implicit columns too.
+Similarly/At the same time there can be implicit columns too.
 
 Here comes 2 properties to control those implicit rows and columns
 
 `
-grid-auto-rows: 100px; (the height of implicit rows)
-grid-auto-columns: 100px; (the width of implicit columns)
+grid-auto-rows: 100px; (the height of implicit rows or each additional rows height)
+grid-auto-columns: 100px; (the width of implicit columns width or each additional columns width)
 `
 
 */
