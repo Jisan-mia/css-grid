@@ -20,15 +20,19 @@ body {
 /* grid styles */
 .grid-container{
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  grid-template: 1fr / repeat(4, 1fr);
 
   row-gap: 10px;
   column-gap: 10px;
+
+  /* grid-auto-flow: column; */
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-columns: minmax(50px, auto);
   
 }
 
 .grid-container .grid-item:nth-child(1) {
-
+  
 }
 
 .grid-container .grid-item:nth-child(2) {
@@ -40,7 +44,12 @@ body {
 
 }
 
-
+.grid-container .grid-item:nth-child(5) {
+  grid-area: 2 / 5 / 3 / 6;
+}
+.grid-container .grid-item:nth-child(6) {
+  grid-area: 2 / 6 / 3 / 7;
+}
 /* grid styles */
 
 .grid-item {
