@@ -20,8 +20,10 @@ body {
 /* grid styles */
 .grid-container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   
 }
 
