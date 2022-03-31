@@ -44,6 +44,31 @@
   align-content: ;
 
 
+# positioning and sizing items using grid-area
+
+  grid-template-areas: the value of this are the grid-area aliases of grid-item, by which we can position our grid. For example:
+
+  grid-template-areas: 
+    "gi1-alias gi1-alias gr3-alias" 
+    "gi2-alias .         gi3-alias"
+    ".         .         gi3-alias" ; (.(period/dot) means this column will be empty)
+
+  // here each ""inverted comma block is a row and each grid-area aliases indicate a column. 
+  Now grid-area aliases should be defined on the grid-item.
+
+  .grid-item1 {
+    grid-area: gi1-alias;
+  }
+  .grid-item2 {
+    grid-area: gi2-alias;
+  }
+  .grid-item3 {
+    grid-area: gi3-alias;
+  }
+
+
+    
+
 # align all-grid items globally from container 
  
   justify-items: center | end | start | etc.;
