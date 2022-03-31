@@ -22,22 +22,27 @@ body {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 
-  row-gap: 10px;
-  column-gap: 10px;
-
+  grid-template-areas: 
+    "gi1-alias gi1-alias gi3-alias"
+    "gi2-alias . gi3-alias"
+    ". . gi3-alias";
   
 }
 
 .grid-container .grid-item:nth-child(1) {
-  
+  grid-area: gi1-alias;
+  background: rgba(0, 128, 0, 0.655);
 }
 
 .grid-container .grid-item:nth-child(2) {
+  grid-area: gi2-alias;
+  background: rgba(0, 128, 0, 0.789);
   
-
 }
 
 .grid-container .grid-item:nth-child(3) {
+  grid-area: gi3-alias;
+  background: rgba(0, 128, 0, 0.88);
 
 }
 /* grid styles */
