@@ -6,7 +6,8 @@
 body {
   padding: 8%;
   display: flex;
-  gap: 2.5rem
+  gap: 2.5rem;
+  align-items: baseline;
 }
 
 .grid-container{
