@@ -122,3 +122,16 @@ grid-auto-columns: 100px; (the width of implicit columns width or each additiona
 
   gap (grid-gap): row-gap(grid-row-gap) / column-gap(grid-column-gap)
 
+
+
+
+
+### Using css grid and flexbox together(when to use flexbox vs grid)
+
+# Use grid when:
+  - You need full control of rows AND column(full-page layout, gallery items)
+  - You want to explicitly define the layout regardless of content size(i.e if you are using flexbox and it starts to get really complicated with a bunch of heights and widths, you probably should be using grid)
+
+# Use flexbox when:
+  - Your content is a row OR column (example: horizontal navbar, vertical navbar)
+  - You want the of items to determine layout.
