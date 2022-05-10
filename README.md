@@ -207,19 +207,19 @@ If you want to know whether the browser support css-grid or not, you can check i
   row-gap: 10px;
   column-gap: 10px;
   grid-auto-rows: minmax(50px, auto);
-  grid-auto-columns: minmax(50px, auto)
+  grid-auto-columns: minmax(50px, auto);
 ```
 
 ### grid gutters is basically adding some space/padding between grid-items(container properties)
 ```css
-  row-gap: 10px; used to add some gap between rows
+  row-gap: 10px; /* used to add some gap between rows */
 
-  column-gap: 10px; used to add some gap between columns
+  column-gap: 10px; /* used to add some gap between columns */
 ```
 
 ### css grid flow algorithm (container properties) specifying exactly how auto-placed items get flowed into the grid.
 ```css
-  grid-auto-flow: row(default) | column(items will stack vertically and then split over to the next column)
+  grid-auto-flow: row(default) | column(items will stack vertically and then split over to the next column);
 ```
 
 ### grid container alignment
@@ -233,12 +233,12 @@ If you want to know whether the browser support css-grid or not, you can check i
 
 ### positioning and sizing items using grid-area
 ```css
-  grid-template-areas: the value of this are the grid-area aliases of grid-item, by which we can position our grid. For example:
+  /* grid-template-areas: the value of this are the grid-area aliases of grid-item, by which we can position our grid. For example: */
 
   grid-template-areas: 
     "gi1-alias gi1-alias gr3-alias" 
     "gi2-alias .         gi3-alias"
-    ".         .         gi3-alias" ; (.(period/dot) means this column will be empty)
+    ".         .         gi3-alias" ; /*(.(period/dot) means this column will be empty) */
 
   /* here each ""inverted comma block is a row and each grid-area aliases indicate a column. 
   Now grid-area aliases should be defined on the grid-item. */
@@ -262,8 +262,8 @@ If you want to know whether the browser support css-grid or not, you can check i
 
 ### how to align the entire grid 
  ```css
-  justify-content: center | end 
-  align-content: center | end
+  justify-content: center | end ;
+  align-content: center | end;
 ```
 
 ### Explicit vs Implicit Grid: to control implicit grid-items. 
@@ -273,8 +273,8 @@ If you want to know whether the browser support css-grid or not, you can check i
 
 Now, on the container, 
 */
-`grid-template-columns: repeat(4, 1fr)`
-`grid-template-rows: 1fr`
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 1fr;
 
 /*
 Above code means, the grid have to be 4 column and in 1 row. Since we have 5 items, 4 items will be on 1st row and the remaining 1 item will be on implicit grid and implicitly it will be on the 2nd row (it's content size will be the row size) though we explicitly wrote only 1 row. 
@@ -285,27 +285,27 @@ Here comes 2 properties to control those implicit rows and columns
 */
 
 
-grid-auto-rows: 100px; (the height of implicit rows or each additional rows height)
-grid-auto-columns: 100px; (the width of implicit columns width or each additional columns width)
+grid-auto-rows: 100px; (the height of implicit rows or each additional rows height);
+grid-auto-columns: 100px; (the width of implicit columns width or each additional columns width);
 ```
 
 
 
 ### shorthand css grid
 ```css
-  grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
+  grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
 
-  grid-row: grid-row-start / grid-row-end
+  grid-row: grid-row-start / grid-row-end;
 
-  grid-column: grid-column-start / grid-column-end
+  grid-column: grid-column-start / grid-column-end;
 
 
   grid: grid-auto-columns / grid-auto-flow 
-  /  grid-auto-rows / grid-template-areas /   grid-template-columns / grid-template-rows
+  /  grid-auto-rows / grid-template-areas /   grid-template-columns / grid-template-rows;
 
-  grid-template: grid-template-columns / grid-template-rows / grid-template-areas
+  grid-template: grid-template-columns / grid-template-rows / grid-template-areas;
 
-  gap (grid-gap): row-gap(grid-row-gap) / column-gap(grid-column-gap)
+  gap (grid-gap): row-gap(grid-row-gap) / column-gap(grid-column-gap);
 ```
 
 
